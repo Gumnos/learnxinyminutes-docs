@@ -24,13 +24,21 @@ VDEV's offer better reliability and safety than a RAID card.  It is discouraged 
 RAID setup with ZFS, as ZFS expects to directly manage the underlying disks.
 
 Types of VDEV's
+
 * stripe (a single disk, no redundancy)
+
 * mirror (n-way mirrors supported)
+
 * raidz
+
 	* raidz1 (1-disk parity, similar to RAID 5)
+	
 	* raidz2 (2-disk parity, similar to RAID 6)
+	
 	* raidz3 (3-disk parity, no RAID analog)
+	
 * disk
+
 * file (not recommended for production due to another filesystem adding unnecessary layering)
 
 Your data is striped across all the VDEV's present in your Storage Pool, so more VDEV's will
@@ -60,9 +68,13 @@ single host can have 2^64 storage pools.  The limits are huge.
 ### Storage Pools
 
 Actions:
+
 * List
+
 * Status
+
 * Destroy
+
 * Get/Set properties
 
 List zpools
@@ -147,10 +159,15 @@ $ zpool destroy test
 ### Datasets
 
 Actions:
+
 * Create
+
 * List
+
 * Rename
+
 * Delete
+
 * Get/Set properties
 
 Create datasets
@@ -267,11 +284,17 @@ ZFS snapshots are one of the things about zfs that are a really big deal
 * They are easy to automate.
 
 Actions:
+
 * Create
+
 * Delete
+
 * Rename
+
 * Access snapshots
+
 * Send / Receive
+
 * Clone
 
 
